@@ -3,29 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>LifeSpot</title>
-    <!--Подключение стилей по относительному пути из внешнего файла-->
     <link href="../Static/CSS/index.css" rel="stylesheet" type="text/css">
+
+    <!-- Внешний скрипт с функциями -->
+    <script type="text/javascript" src="../Static/JS/index.js"></script>
+
+    <!-- Внутренний скрипт с вызовами функций -->
+    <script>
+        // Проверка на возраст
+        //checkAge();
+
+        // сохранение сессии
+        handleSession()
+
+        // вывод данных сессии в консоль
+        sessionLog();
+
+        // функция для получения пользовательского ввода
+        const inputParseFunction = function () {
+            return document.getElementsByTagName('input')[0].value.toLowerCase();
+        }
+    </script>
+
 </head>
 <!--Хедер страницы находится сразу над тегом body-->
 <header id="header-index">
-    <!--Заголовок страницы-->
     <h1>LifeSpot - прямые трансляции с улиц</h1>
-    <!--Параграф-->
     <p>Покажем, что происходит прямо сейчас</p>
-    <div class="search-box">
-        <form action="#">
-            <input type="text" placeholder="Поиск видео" name="search">
-            <button type="submit">Отправить</button>
-        </form>
-    </div>
+    <input type="text" oninput="
+
+       // Вызов (функция в аргумент передаётся без круглых скобок)
+       filterContent()" size=50%>
 </header>
-<!--Сайд-бар страницы-->
-<aside id="sidebar">
-    <div class="navbar">
-        <a href="/"><p>Все трансляции</p></a>
-        <a href="/"><p>О проекте</p></a>
-    </div>
-</aside>
+
+<!--SIDEBAR-->
 <body>
     <div class="bordered">
         <div class="video-container">
